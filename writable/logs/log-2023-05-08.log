@@ -589,3 +589,374 @@ in APPPATH\Models\V1\Mdl_member.php on line 42.
  4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
  5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 06:25:02 --> mysqli_sql_exception: Unknown column 'date_created' in 'field list' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `member`...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `member`...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `member`...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `member`...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(31): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 06:25:02 --> Undefined variable: error
+in APPPATH\Models\V1\Mdl_member.php on line 42.
+ 1 APPPATH\Models\V1\Mdl_member.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: error', 'C:\\xampp\\htdocs\\api.pos.com\\app\\Models\\V1\\Mdl_member.php', 42, [...])
+ 2 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 06:25:12 --> Class 'Hashids\Math\Bc' not found
+in APPPATH\ThirdParty\Hashids\Hashids.php on line 405.
+ 1 APPPATH\ThirdParty\Hashids\Hashids.php(99): Hashids\Hashids->getMathExtension()
+ 2 APPPATH\Models\V1\Mdl_member.php(58): Hashids\Hashids->__construct('', 48, 'abcdefghijklmnopqrstuvwxyz1234567890')
+ 3 APPPATH\Models\V1\Mdl_member.php(26): App\Models\Mdl_member->generate_token(23)
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 06:26:34 --> mysqli_sql_exception: Unknown column 'date_created' in 'field list' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `member`...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `member`...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `member`...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `member`...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(31): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 06:26:34 --> Undefined variable: error
+in APPPATH\Models\V1\Mdl_member.php on line 42.
+ 1 APPPATH\Models\V1\Mdl_member.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: error', 'C:\\xampp\\htdocs\\api.pos.com\\app\\Models\\V1\\Mdl_member.php', 42, [...])
+ 2 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 06:27:01 --> mysqli_sql_exception: Unknown column 'date_created' in 'field list' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `member`...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `member`...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `member`...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `member`...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(31): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 06:27:01 --> Undefined variable: error
+in APPPATH\Models\V1\Mdl_member.php on line 42.
+ 1 APPPATH\Models\V1\Mdl_member.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: error', 'C:\\xampp\\htdocs\\api.pos.com\\app\\Models\\V1\\Mdl_member.php', 42, [...])
+ 2 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 06:27:52 --> mysqli_sql_exception: Unknown column 'date_created' in 'field list' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `member`...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `member`...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `member`...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `member`...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(31): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 06:32:55 --> Class 'Hashids\Math\Bc' not found
+in APPPATH\ThirdParty\Hashids\Hashids.php on line 405.
+ 1 APPPATH\ThirdParty\Hashids\Hashids.php(99): Hashids\Hashids->getMathExtension()
+ 2 APPPATH\Models\V1\Mdl_member.php(57): Hashids\Hashids->__construct('', 48, 'abcdefghijklmnopqrstuvwxyz1234567890')
+ 3 APPPATH\Models\V1\Mdl_member.php(26): App\Models\Mdl_member->generate_token(27)
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 06:33:22 --> Class 'Hashids\Math\Bc' not found
+in APPPATH\ThirdParty\Hashids\Hashids.php on line 405.
+ 1 APPPATH\ThirdParty\Hashids\Hashids.php(99): Hashids\Hashids->getMathExtension()
+ 2 APPPATH\Models\V1\Mdl_member.php(57): Hashids\Hashids->__construct('', 48, 'abcdefghijklmnopqrstuvwxyz1234567890')
+ 3 APPPATH\Models\V1\Mdl_member.php(26): App\Models\Mdl_member->generate_token(28)
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 06:33:37 --> mysqli_sql_exception: Unknown column 'date_created' in 'field list' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `member`...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `member`...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `member`...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `member`...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(31): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-08 06:42:45 --> mysqli_sql_exception: Duplicate entry '94423-demo@gmail.com' for key 'unique i' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 06:42:45 --> Email already used
+in APPPATH\Models\V1\Mdl_member.php on line 20.
+ 1 APPPATH\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 06:46:10 --> mysqli_sql_exception: Duplicate entry '94423-demo@gmail.com' for key 'unique i' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-08 06:47:56 --> mysqli_sql_exception: Duplicate entry '94423-demo@gmail.com' for key 'unique i' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-08 06:48:40 --> mysqli_sql_exception: Duplicate entry '94423-demo@gmail.com' for key 'unique i' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-08 06:49:16 --> mysqli_sql_exception: Duplicate entry '94423-demo@gmail.com' for key 'unique i' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-08 06:50:10 --> mysqli_sql_exception: Duplicate entry '94423-demo@gmail.com' for key 'unique i' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-08 06:50:10 --> mysqli_sql_exception: Unknown column 'created_' in 'field list' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `member`...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `member`...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `member`...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `member`...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(31): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-08 06:50:25 --> mysqli_sql_exception: Duplicate entry '94423-demo@gmail.com' for key 'unique i' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-08 06:50:57 --> mysqli_sql_exception: Duplicate entry '94423-demo@gmail.com' for key 'unique i' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-08 06:51:15 --> mysqli_sql_exception: Duplicate entry '94423-demo@gmail.com' for key 'unique i' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-08 06:51:15 --> mysqli_sql_exception: Unknown column 'created_t' in 'field list' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `member`...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `member`...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `member`...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `member`...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(31): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-08 07:08:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `member` WHERE `token`='qyjolv6x4k3y1pg2o6s3q58mz1ujx7838odrm8qw02nz957p'' at line 1 in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `a...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `a...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `a...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(65): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `a...', 'qyjolv6x4k3y1pg...')
+#4 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(82): App\Models\Mdl_member->getby_token('qyjolv6x4k3y1pg...')
+#5 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->activate()
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-08 07:08:49 --> Call to a member function getRow() on bool
+in APPPATH\Models\V1\Mdl_member.php on line 65.
+ 1 APPPATH\Controllers\V1\Auth.php(82): App\Models\Mdl_member->getby_token('qyjolv6x4k3y1pg2o6s3q58mz1ujx7838odrm8qw02nz957p')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->activate()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 07:13:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `member` WHERE `token`='qyjolv6x4k3y1pg2o6s3q58mz1ujx7838odrm8qw02nz957p'' at line 1 in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `a...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `a...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `a...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(66): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `a...', 'qyjolv6x4k3y1pg...')
+#4 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(82): App\Models\Mdl_member->getby_token('qyjolv6x4k3y1pg...')
+#5 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->activate()
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-08 07:13:12 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\V1\Mdl_member.php on line 66.
+ 1 APPPATH\Controllers\V1\Auth.php(82): App\Models\Mdl_member->getby_token('qyjolv6x4k3y1pg2o6s3q58mz1ujx7838odrm8qw02nz957p')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->activate()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 07:14:09 --> mysqli_sql_exception: Unknown column 'appid ' in 'field list' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `a...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `a...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `a...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(66): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `a...', 'qyjolv6x4k3y1pg...')
+#4 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(82): App\Models\Mdl_member->getby_token('qyjolv6x4k3y1pg...')
+#5 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->activate()
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-08 07:14:09 --> Call to a member function getRowArray() on bool
+in APPPATH\Models\V1\Mdl_member.php on line 66.
+ 1 APPPATH\Controllers\V1\Auth.php(82): App\Models\Mdl_member->getby_token('qyjolv6x4k3y1pg2o6s3q58mz1ujx7838odrm8qw02nz957p')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->activate()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 07:14:19 --> mysqli_sql_exception: Unknown column 'appid ' in 'field list' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `a...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `a...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `a...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(66): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `a...', 'qyjolv6x4k3y1pg...')
+#4 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(82): App\Models\Mdl_member->getby_token('qyjolv6x4k3y1pg...')
+#5 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->activate()
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-08 07:14:19 --> Call to a member function getRow() on bool
+in APPPATH\Models\V1\Mdl_member.php on line 66.
+ 1 APPPATH\Controllers\V1\Auth.php(82): App\Models\Mdl_member->getby_token('qyjolv6x4k3y1pg2o6s3q58mz1ujx7838odrm8qw02nz957p')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->activate()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 08:49:14 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ou...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ou...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ou...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ou...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(161): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(373): App\Models\Mdl_member->createOutlet(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->addoutlet()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-05-08 08:51:04 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ou...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ou...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ou...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ou...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(161): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(374): App\Models\Mdl_member->createOutlet(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->addoutlet()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
