@@ -1,0 +1,591 @@
+CRITICAL - 2023-05-08 01:46:46 --> Class "App\Filters\Services" not found
+in APPPATH/Filters/FilterApi.php on line 15.
+ 1 SYSTEMPATH/Filters/Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 01:49:08 --> Class "App\Filters\Services" not found
+in APPPATH/Filters/FilterApi.php on line 15.
+ 1 SYSTEMPATH/Filters/Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 03:56:26 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-05-08 03:56:42 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-05-08 03:57:13 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-05-08 03:57:15 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-05-08 03:58:14 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-05-08 03:58:55 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-05-08 03:58:58 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-05-08 04:00:40 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-05-08 04:00:43 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-05-08 04:01:31 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+ERROR - 2023-05-08 02:53:30 --> mysqli_sql_exception: Table 'apisandb_sbcpos.setting' doesn't exist in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM s...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...', Array)
+#4 C:\xampp\htdocs\api.pos.com\app\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796...')
+#5 C:\xampp\htdocs\api.pos.com\app\Filters\FilterApi.php(43): validateKey('971c5b092526796...')
+#6 C:\xampp\htdocs\api.pos.com\system\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/registe...', 'before')
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 02:53:30 --> Table 'apisandb_sbcpos.setting' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 4 APPPATH\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM setting WHERE sha1(appid+secret)=?', [...])
+ 5 APPPATH\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796c856a7ef5993de23733987b3e')
+ 6 APPPATH\Filters\FilterApi.php(43): validateKey('971c5b092526796c856a7ef5993de23733987b3e')
+ 7 SYSTEMPATH\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/register', 'before')
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 02:53:39 --> mysqli_sql_exception: Table 'apisandb_sbcpos.setting' doesn't exist in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM s...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...', Array)
+#4 C:\xampp\htdocs\api.pos.com\app\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796...')
+#5 C:\xampp\htdocs\api.pos.com\app\Filters\FilterApi.php(43): validateKey('971c5b092526796...')
+#6 C:\xampp\htdocs\api.pos.com\system\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/registe...', 'before')
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 02:53:39 --> Table 'apisandb_sbcpos.setting' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 4 APPPATH\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM setting WHERE sha1(appid+secret)=?', [...])
+ 5 APPPATH\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796c856a7ef5993de23733987b3e')
+ 6 APPPATH\Filters\FilterApi.php(43): validateKey('971c5b092526796c856a7ef5993de23733987b3e')
+ 7 SYSTEMPATH\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/register', 'before')
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 02:56:11 --> mysqli_sql_exception: Table 'apisandb_sbcpos.setting' doesn't exist in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM s...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...', Array)
+#4 C:\xampp\htdocs\api.pos.com\app\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796...')
+#5 C:\xampp\htdocs\api.pos.com\app\Filters\FilterApi.php(43): validateKey('971c5b092526796...')
+#6 C:\xampp\htdocs\api.pos.com\system\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/registe...', 'before')
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 02:56:11 --> Table 'apisandb_sbcpos.setting' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 4 APPPATH\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM setting WHERE sha1(appid+secret)=?', [...])
+ 5 APPPATH\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796c856a7ef5993de23733987b3e')
+ 6 APPPATH\Filters\FilterApi.php(43): validateKey('971c5b092526796c856a7ef5993de23733987b3e')
+ 7 SYSTEMPATH\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/register', 'before')
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 02:57:46 --> mysqli_sql_exception: Table 'apisandb_sbcpos.setting' doesn't exist in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM s...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...', Array)
+#4 C:\xampp\htdocs\api.pos.com\app\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796...')
+#5 C:\xampp\htdocs\api.pos.com\app\Filters\FilterApi.php(43): validateKey('971c5b092526796...')
+#6 C:\xampp\htdocs\api.pos.com\system\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/registe...', 'before')
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 02:57:46 --> Table 'apisandb_sbcpos.setting' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 4 APPPATH\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM setting WHERE sha1(appid+secret)=?', [...])
+ 5 APPPATH\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796c856a7ef5993de23733987b3e')
+ 6 APPPATH\Filters\FilterApi.php(43): validateKey('971c5b092526796c856a7ef5993de23733987b3e')
+ 7 SYSTEMPATH\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/register', 'before')
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 02:57:51 --> mysqli_sql_exception: Table 'apisandb_sbcpos.setting' doesn't exist in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM s...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...', Array)
+#4 C:\xampp\htdocs\api.pos.com\app\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796...')
+#5 C:\xampp\htdocs\api.pos.com\app\Filters\FilterApi.php(43): validateKey('971c5b092526796...')
+#6 C:\xampp\htdocs\api.pos.com\system\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/registe...', 'before')
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 02:57:51 --> Table 'apisandb_sbcpos.setting' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 4 APPPATH\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM setting WHERE sha1(appid+secret)=?', [...])
+ 5 APPPATH\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796c856a7ef5993de23733987b3e')
+ 6 APPPATH\Filters\FilterApi.php(43): validateKey('971c5b092526796c856a7ef5993de23733987b3e')
+ 7 SYSTEMPATH\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/register2', 'before')
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 02:58:01 --> mysqli_sql_exception: Table 'apisandb_sbcpos.setting' doesn't exist in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM s...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...', Array)
+#4 C:\xampp\htdocs\api.pos.com\app\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796...')
+#5 C:\xampp\htdocs\api.pos.com\app\Filters\FilterApi.php(43): validateKey('971c5b092526796...')
+#6 C:\xampp\htdocs\api.pos.com\system\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/registe...', 'before')
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 02:58:01 --> Table 'apisandb_sbcpos.setting' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 4 APPPATH\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM setting WHERE sha1(appid+secret)=?', [...])
+ 5 APPPATH\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796c856a7ef5993de23733987b3e')
+ 6 APPPATH\Filters\FilterApi.php(43): validateKey('971c5b092526796c856a7ef5993de23733987b3e')
+ 7 SYSTEMPATH\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/register2', 'before')
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 02:58:23 --> mysqli_sql_exception: Table 'apisandb_sbcpos.setting' doesn't exist in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM s...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...', Array)
+#4 C:\xampp\htdocs\api.pos.com\app\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796...')
+#5 C:\xampp\htdocs\api.pos.com\app\Filters\FilterApi.php(43): validateKey('971c5b092526796...')
+#6 C:\xampp\htdocs\api.pos.com\system\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/registe...', 'before')
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 02:58:23 --> Table 'apisandb_sbcpos.setting' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 4 APPPATH\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM setting WHERE sha1(appid+secret)=?', [...])
+ 5 APPPATH\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796c856a7ef5993de23733987b3e')
+ 6 APPPATH\Filters\FilterApi.php(43): validateKey('971c5b092526796c856a7ef5993de23733987b3e')
+ 7 SYSTEMPATH\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/register2', 'before')
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 02:58:47 --> mysqli_sql_exception: Table 'apisandb_sbcpos.setting' doesn't exist in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM s...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...', Array)
+#4 C:\xampp\htdocs\api.pos.com\app\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796...')
+#5 C:\xampp\htdocs\api.pos.com\app\Filters\FilterApi.php(43): validateKey('971c5b092526796...')
+#6 C:\xampp\htdocs\api.pos.com\system\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/registe...', 'before')
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 02:58:47 --> Table 'apisandb_sbcpos.setting' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 4 APPPATH\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM setting WHERE sha1(appid+secret)=?', [...])
+ 5 APPPATH\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796c856a7ef5993de23733987b3e')
+ 6 APPPATH\Filters\FilterApi.php(43): validateKey('971c5b092526796c856a7ef5993de23733987b3e')
+ 7 SYSTEMPATH\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/register2', 'before')
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 02:58:58 --> mysqli_sql_exception: Table 'apisandb_sbcpos.setting' doesn't exist in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM s...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...', Array)
+#4 C:\xampp\htdocs\api.pos.com\app\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796...')
+#5 C:\xampp\htdocs\api.pos.com\app\Filters\FilterApi.php(43): validateKey('971c5b092526796...')
+#6 C:\xampp\htdocs\api.pos.com\system\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/registe...', 'before')
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 02:58:58 --> Table 'apisandb_sbcpos.setting' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 4 APPPATH\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM setting WHERE sha1(appid+secret)=?', [...])
+ 5 APPPATH\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796c856a7ef5993de23733987b3e')
+ 6 APPPATH\Filters\FilterApi.php(43): validateKey('971c5b092526796c856a7ef5993de23733987b3e')
+ 7 SYSTEMPATH\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/register2', 'before')
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 02:59:21 --> mysqli_sql_exception: Table 'apisandb_sbcpos.setting' doesn't exist in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM s...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 C:\xampp\htdocs\api.pos.com\app\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...', Array)
+#4 C:\xampp\htdocs\api.pos.com\app\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796...')
+#5 C:\xampp\htdocs\api.pos.com\app\Filters\FilterApi.php(43): validateKey('971c5b092526796...')
+#6 C:\xampp\htdocs\api.pos.com\system\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/registe...', 'before')
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 02:59:21 --> Table 'apisandb_sbcpos.setting' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM setting WHERE sha1(appid+secret)=\'971c5b092526796c856a7ef5993de23733987b3e\'')
+ 4 APPPATH\Models\ValidateToken.php(21): CodeIgniter\Database\BaseConnection->query('SELECT * FROM setting WHERE sha1(appid+secret)=?', [...])
+ 5 APPPATH\Helpers\preapi_helper.php(13): App\Models\ValidateToken->checkAPIkey('971c5b092526796c856a7ef5993de23733987b3e')
+ 6 APPPATH\Filters\FilterApi.php(43): validateKey('971c5b092526796c856a7ef5993de23733987b3e')
+ 7 SYSTEMPATH\Filters\Filters.php(173): App\Filters\FilterApi->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('v1/auth/register2', 'before')
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 03:33:25 --> Undefined variable: bank
+in APPPATH\Controllers\V1\Auth.php on line 65.
+ 1 APPPATH\Controllers\V1\Auth.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: bank', 'C:\\xampp\\htdocs\\api.pos.com\\app\\Controllers\\V1\\Auth.php', 65, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 03:58:35 --> Undefined index: timezone
+in APPPATH\Controllers\V1\Auth.php on line 51.
+ 1 APPPATH\Controllers\V1\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: timezone', 'C:\\xampp\\htdocs\\api.pos.com\\app\\Controllers\\V1\\Auth.php', 51, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:00:57 --> Undefined index: timezone
+in APPPATH\Controllers\V1\Auth.php on line 51.
+ 1 APPPATH\Controllers\V1\Auth.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: timezone', 'C:\\xampp\\htdocs\\api.pos.com\\app\\Controllers\\V1\\Auth.php', 51, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:11:38 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(27): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:12:49 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(26): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:12:52 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(26): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(62): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:13:19 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(26): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:15:27 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(26): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:17:34 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(26): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:18:47 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(26): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:19:21 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(26): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:20:14 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(26): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:21:20 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(26): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:27:25 --> Trying to get property 'appid' of non-object
+in APPPATH\Controllers\V1\Auth.php on line 61.
+ 1 APPPATH\Controllers\V1\Auth.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'appid\' of non-object', 'C:\\xampp\\htdocs\\api.pos.com\\app\\Controllers\\V1\\Auth.php', 61, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:28:36 --> Trying to get property 'appid' of non-object
+in APPPATH\Controllers\V1\Auth.php on line 61.
+ 1 APPPATH\Controllers\V1\Auth.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'appid\' of non-object', 'C:\\xampp\\htdocs\\api.pos.com\\app\\Controllers\\V1\\Auth.php', 61, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:29:49 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(26): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:35:53 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(26): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:47:38 --> Undefined variable: mdata
+in APPPATH\Models\V1\Mdl_member.php on line 47.
+ 1 APPPATH\Models\V1\Mdl_member.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: mdata', 'C:\\xampp\\htdocs\\api.pos.com\\app\\Models\\V1\\Mdl_member.php', 47, [...])
+ 2 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 04:51:32 --> Undefined variable: mdata
+in APPPATH\Models\V1\Mdl_member.php on line 47.
+ 1 APPPATH\Models\V1\Mdl_member.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: mdata', 'C:\\xampp\\htdocs\\api.pos.com\\app\\Models\\V1\\Mdl_member.php', 47, [...])
+ 2 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 05:09:36 --> Undefined variable: mdata
+in APPPATH\Models\V1\Mdl_member.php on line 47.
+ 1 APPPATH\Models\V1\Mdl_member.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: mdata', 'C:\\xampp\\htdocs\\api.pos.com\\app\\Models\\V1\\Mdl_member.php', 47, [...])
+ 2 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 05:09:59 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\V1\Mdl_member.php(26): CodeIgniter\Model->__call('generate_token', [...])
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 05:16:35 --> Class 'Hashids\Math\Bc' not found
+in APPPATH\ThirdParty\Hashids\Hashids.php on line 405.
+ 1 APPPATH\ThirdParty\Hashids\Hashids.php(99): Hashids\Hashids->getMathExtension()
+ 2 APPPATH\Models\V1\Mdl_member.php(58): Hashids\Hashids->__construct('', 48, 'abcdefghijklmnopqrstuvwxyz1234567890')
+ 3 APPPATH\Models\V1\Mdl_member.php(26): App\Models\Mdl_member->generate_token(14)
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 05:22:38 --> Class 'Hashids\Math\Bc' not found
+in APPPATH\ThirdParty\Hashids\Hashids.php on line 405.
+ 1 APPPATH\ThirdParty\Hashids\Hashids.php(99): Hashids\Hashids->getMathExtension()
+ 2 APPPATH\Models\V1\Mdl_member.php(58): Hashids\Hashids->__construct('', 48, 'abcdefghijklmnopqrstuvwxyz1234567890')
+ 3 APPPATH\Models\V1\Mdl_member.php(26): App\Models\Mdl_member->generate_token(15)
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 05:24:52 --> Class 'Hashids\Math\Bc' not found
+in APPPATH\ThirdParty\Hashids\Hashids.php on line 405.
+ 1 APPPATH\ThirdParty\Hashids\Hashids.php(99): Hashids\Hashids->getMathExtension()
+ 2 APPPATH\Models\V1\Mdl_member.php(58): Hashids\Hashids->__construct('', 48, 'abcdefghijklmnopqrstuvwxyz1234567890')
+ 3 APPPATH\Models\V1\Mdl_member.php(26): App\Models\Mdl_member->generate_token(16)
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 05:24:55 --> Class 'Hashids\Math\Bc' not found
+in APPPATH\ThirdParty\Hashids\Hashids.php on line 405.
+ 1 APPPATH\ThirdParty\Hashids\Hashids.php(99): Hashids\Hashids->getMathExtension()
+ 2 APPPATH\Models\V1\Mdl_member.php(58): Hashids\Hashids->__construct('', 48, 'abcdefghijklmnopqrstuvwxyz1234567890')
+ 3 APPPATH\Models\V1\Mdl_member.php(26): App\Models\Mdl_member->generate_token(17)
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 05:29:48 --> Class 'Hashids\Math\Bc' not found
+in APPPATH\ThirdParty\Hashids\Hashids.php on line 405.
+ 1 APPPATH\ThirdParty\Hashids\Hashids.php(99): Hashids\Hashids->getMathExtension()
+ 2 APPPATH\Models\V1\Mdl_member.php(58): Hashids\Hashids->__construct('', 48, 'abcdefghijklmnopqrstuvwxyz1234567890')
+ 3 APPPATH\Models\V1\Mdl_member.php(26): App\Models\Mdl_member->generate_token(18)
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 05:31:34 --> Class 'Hashids\Math\Bc' not found
+in APPPATH\ThirdParty\Hashids\Hashids.php on line 405.
+ 1 APPPATH\ThirdParty\Hashids\Hashids.php(99): Hashids\Hashids->getMathExtension()
+ 2 APPPATH\Models\V1\Mdl_member.php(58): Hashids\Hashids->__construct('', 48, 'abcdefghijklmnopqrstuvwxyz1234567890')
+ 3 APPPATH\Models\V1\Mdl_member.php(26): App\Models\Mdl_member->generate_token(19)
+ 4 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-08 05:33:56 --> Interface 'Hashids\Math\MathInterface' not found
+in APPPATH\ThirdParty\Hashids\Math\Bc.php on line 14.
+ 1 APPPATH\Models\V1\Mdl_member.php(55): require_once()
+ 2 APPPATH\Models\V1\Mdl_member.php(26): App\Models\Mdl_member->generate_token(20)
+ 3 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 05:34:41 --> mysqli_sql_exception: Unknown column 'date_created' in 'field list' in C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\api.pos.com\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `member`...', 0)
+#1 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `member`...')
+#2 C:\xampp\htdocs\api.pos.com\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `member`...')
+#3 C:\xampp\htdocs\api.pos.com\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `member`...', Array, false)
+#4 C:\xampp\htdocs\api.pos.com\app\Models\V1\Mdl_member.php(31): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\api.pos.com\app\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add(Array)
+#6 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+#7 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+#8 C:\xampp\htdocs\api.pos.com\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api.pos.com\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 05:34:41 --> Undefined variable: error
+in APPPATH\Models\V1\Mdl_member.php on line 42.
+ 1 APPPATH\Models\V1\Mdl_member.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: error', 'C:\\xampp\\htdocs\\api.pos.com\\app\\Models\\V1\\Mdl_member.php', 42, [...])
+ 2 APPPATH\Controllers\V1\Auth.php(61): App\Models\Mdl_member->add([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\V1\Auth->register()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\V1\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
