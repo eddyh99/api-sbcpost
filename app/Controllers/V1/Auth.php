@@ -48,6 +48,7 @@ class Auth extends BaseController
 		$data           = $this->request->getJSON();
 
 		$filters = array(
+			'nama'     => FILTER_SANITIZE_STRING,
 			'email'     => FILTER_VALIDATE_EMAIL,
 			'password'  => FILTER_UNSAFE_RAW,
 		);
@@ -61,6 +62,7 @@ class Auth extends BaseController
 
 		$mdata = array(
 			"appid"   	=> $appid,
+			"nama"   	=> $data->nama,
 			"email"     => $data->email,
 			"passwd"    => sha1($data->password)
 		);
@@ -112,8 +114,8 @@ class Auth extends BaseController
 		}
 
 		$result = $this->member->activate($member->id);
-		if (@$member->code == 5051) {
-			return $this->respond(@$member);
+		if (@$result->code == 5051) {
+			return $this->respond(@$result);
 		}
 
 		$response = [
@@ -229,6 +231,34 @@ class Auth extends BaseController
 			"message"  => [
 				"token"   => $token
 			]
+		];
+		return $this->respond($response);
+	}
+
+	public function recoverytoken()
+	{
+		$token = $this->request->getGet('token', FILTER_SANITIZE_STRING);
+		$member = $this->member->getby_token($token);
+
+		// Token salah
+		if (@$member->code == 5051) {
+			return $this->respond(@$member);
+		}
+
+		// Member tersuspend atau tidak akitf
+		if (@$member->status == 'disabled') {
+			$response = [
+				"code"      => "5051",
+				"error"     => "06",
+				"message"   => "Your account is suspended. Please contact administrator"
+			];
+			return $this->respond($response);
+		}
+
+		$response = [
+			"code"       => "200",
+			"error"      => null,
+			"message"    => $member
 		];
 		return $this->respond($response);
 	}
