@@ -7,6 +7,9 @@ use Exception;
 class ValidateToken extends Model
 {
 
+    protected $allowedFields = ['token'];
+    protected $db;
+
     public function __construct()
     {
         $this->db = \Config\Database::connect();

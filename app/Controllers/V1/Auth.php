@@ -16,9 +16,15 @@ class Auth extends BaseController
 
 	public function register()
 	{
-	    $appid   = getAppId(apache_request_headers()["Authorization"]);
+		$appid   = getAppId(apache_request_headers()["Authorization"]);
 		$validation = $this->validation;
 		$validation->setRules([
+			'nama' => [
+				'rules'  => 'required',
+				'errors' => [
+					'required'      => 'Nama is required'
+				]
+			],
 			'email' => [
 				'rules'  => 'required|valid_email',
 				'errors' => [
@@ -42,10 +48,11 @@ class Auth extends BaseController
 		$data           = $this->request->getJSON();
 
 		$filters = array(
+			'nama'     => FILTER_SANITIZE_STRING,
 			'email'     => FILTER_VALIDATE_EMAIL,
 			'password'  => FILTER_UNSAFE_RAW,
 		);
-		
+
 		$filtered = array();
 		foreach ($data as $key => $value) {
 			$filtered[$key] = filter_var($value, $filters[$key]);
@@ -55,6 +62,7 @@ class Auth extends BaseController
 
 		$mdata = array(
 			"appid"   	=> $appid,
+			"nama"   	=> $data->nama,
 			"email"     => $data->email,
 			"passwd"    => sha1($data->password)
 		);
@@ -71,7 +79,7 @@ class Auth extends BaseController
 				"token"   => $result->token
 			]
 		];
-		
+
 		return $this->respond($response);
 	}
 
@@ -80,9 +88,13 @@ class Auth extends BaseController
 	{
 		$token = $this->request->getGet('token', FILTER_SANITIZE_STRING);
 		$member = $this->member->getby_token($token);
+
+		// Token salah
 		if (@$member->code == 5051) {
 			return $this->respond(@$member);
 		}
+
+		// Akun sudah aktif
 		if (@$member->status == 'active') {
 			$response = [
 				"code"       => "5051",
@@ -90,6 +102,8 @@ class Auth extends BaseController
 				"message"    => "Member already active"
 			];
 			return $this->respond($response);
+
+			// Member tersuspend atau tidak akitf
 		} else if (@$member->status == 'disabled') {
 			$response = [
 				"code"      => "5051",
@@ -99,9 +113,9 @@ class Auth extends BaseController
 			return $this->respond($response);
 		}
 
-		$result = $this->member->activate($member->ucode);
-		if (@$member->code == 5051) {
-			return $this->respond(@$member);
+		$result = $this->member->activate($member->id);
+		if (@$result->code == 5051) {
+			return $this->respond(@$result);
 		}
 
 		$response = [
@@ -112,81 +126,9 @@ class Auth extends BaseController
 		return $this->respond($response);
 	}
 
-	public function getmember_byrefcode()
-	{
-		$bank       = getBankId(apache_request_headers()["Authorization"]);
-		$refcode    = $this->request->getGet('referral', FILTER_SANITIZE_STRING);
-		$refmember  = $this->member->getby_refcode($refcode, $bank->id);
-		if (@$refmember->code == 5051) {
-			return $this->respond(@$refmember);
-		}
-		if (@$refmember->status == 'disabled') {
-			$response = [
-				"code"      => "5051",
-				"error"     => "06",
-				"message"   => "Referral account is suspended. Please contact administrator"
-			];
-			return $this->respond($response);
-		}
-		$response = [
-			"code"      => "200",
-			"error"      => null,
-			"message"    => $refmember
-		];
-		return $this->respond($response);
-	}
-
-	public function getmember_byucode()
-	{
-		$ucode = $this->request->getGet('ucode', FILTER_SANITIZE_STRING);
-		$member = $this->member->getby_ucode($ucode);
-		if (@$member->code == 5051) {
-			return $this->respond(@$member);
-		}
-		if (@$member->status == 'disabled') {
-			$response = [
-				"code"      => "5051",
-				"error"     => "06",
-				"message"   => "Your account is suspended. Please contact administrator"
-			];
-			return $this->respond($response);
-		}
-
-		$response = [
-			"code"      => "200",
-			"error"      => null,
-			"message"    => $member
-		];
-		return $this->respond($response);
-	}
-
-	public function getmember_byemail()
-	{
-		$bank       = getBankId(apache_request_headers()["Authorization"]);
-		$email = $this->request->getGet('email', FILTER_VALIDATE_EMAIL);
-		$member = $this->member->getby_email($email, $bank->id);
-		if (@$member->code == 5051) {
-			return $this->respond(@$member);
-		}
-		if (@$member->status == 'disabled') {
-			$response = [
-				"code"      => "5051",
-				"error"     => "06",
-				"message"   => "Your account is suspended. Please contact administrator"
-			];
-			return $this->respond($response);
-		}
-
-		$response = [
-			"code"      => "200",
-			"error"      => null,
-			"message"    => $member
-		];
-		return $this->respond($response);
-	}
 	public function signin()
 	{
-		$bank       = getBankId(apache_request_headers()["Authorization"]);
+		$appid   = getAppId(apache_request_headers()["Authorization"]);
 		$validation = $this->validation;
 		$validation->setRules([
 			'email' => [
@@ -211,60 +153,36 @@ class Auth extends BaseController
 
 		$data           = $this->request->getJSON();
 
-		$user = $this->user->getby_email($data->email, $bank->id);
+		$user = $this->member->getby_email($data->email, $appid);
 		if (@$user->code == 5051) {
-			$user = NULL;
-			$member = $this->member->getby_email($data->email, $bank->id);
-			if (@$member->code == 5051) {
-				return $this->respond(@$member);
-			}
+			return $this->respond(@$user);
 		}
 
+		// Jika ada User
 		if ($user != NULL) {
-			if ($data->password == $user->passwd) {
-				$session_data = array(
-					'id'        => $user->id,
-					'role'      => $user->role, //"operator", //admin
-					'ucode'     => "",
-					'referral'  => "",
-					'time_location' => $user->location,
-				);
-
-				$response = [
-					"code"      => "200",
-					"error"      => null,
-					"message"    => $session_data
-				];
-				return $this->respond($response);
-			} else {
-				$response = [
-					"code"      => "5051",
-					"error"     => "04",
-					"message"   => "Invalid username or password"
-				];
-				return $this->respond($response);
-			}
-		} elseif ($member != NULL) {
-			if ($data->password == $member->passwd) {
-				if ($member->status == 'new') {
+			// Cek Password
+			if (sha1($data->password) == $user->passwd) {
+				if ($user->status == 'new') {
 					$response = [
 						"code"      => "5051",
 						"error"     => "22",
 						"message"   => "Please activate your account"
 					];
-				} elseif ($member->status == 'disabled') {
+				} elseif ($user->status == 'disabled') {
 					$response = [
 						"code"      => "5051",
 						"error"     => "06",
 						"message"   => "Your account is suspended. Please contact administrator"
 					];
-				} elseif ($member->status == 'active') {
+				} elseif ($user->status == 'active') {
 					$session_data = array(
-						'id'        => $member->id,
-						'role'      => "member",
-						'ucode'     => $member->ucode,
-						'refcode'   => $member->refcode,
-						'time_location' => $member->location,
+						'id'        => $user->id,
+						'appid'        => $user->appid,
+						'email'        => $user->email,
+						'passwd'        => $user->passwd,
+						'nama'        => $user->nama,
+						'status'        => $user->status,
+						'created_at'        => $user->created_at,
 					);
 
 					$response = [
@@ -317,6 +235,34 @@ class Auth extends BaseController
 		return $this->respond($response);
 	}
 
+	public function recoverytoken()
+	{
+		$token = $this->request->getGet('token', FILTER_SANITIZE_STRING);
+		$member = $this->member->getby_token($token);
+
+		// Token salah
+		if (@$member->code == 5051) {
+			return $this->respond(@$member);
+		}
+
+		// Member tersuspend atau tidak akitf
+		if (@$member->status == 'disabled') {
+			$response = [
+				"code"      => "5051",
+				"error"     => "06",
+				"message"   => "Your account is suspended. Please contact administrator"
+			];
+			return $this->respond($response);
+		}
+
+		$response = [
+			"code"       => "200",
+			"error"      => null,
+			"message"    => $member
+		];
+		return $this->respond($response);
+	}
+
 	public function updatepassword()
 	{
 		$validation = $this->validation;
@@ -328,10 +274,10 @@ class Auth extends BaseController
 				]
 			],
 			'password' => [
-				'rules'  => 'required|min_length[40]',
+				'rules'  => 'required|min_length[8]',
 				'errors' => [
 					'required'      => 'Password is required',
-					'min_length'    => 'Min length password is 40 characters'
+					'min_length'    => 'Min length password is 8 characters'
 				]
 			]
 		]);
@@ -362,6 +308,7 @@ class Auth extends BaseController
 			"email"     => $member->email,
 			"token"     => $data->token
 		);
+
 		$mdata = array(
 			"passwd"    => $data->password,
 			"token"     => NULL
@@ -376,6 +323,96 @@ class Auth extends BaseController
 			"error"      => null,
 			"message"    => "Password successfully changed"
 		];
+		return $this->respond($response);
+	}
+
+	public function addoutlet()
+	{
+		$appid   = getAppId(apache_request_headers()["Authorization"]);
+		$validation = $this->validation;
+		$validation->setRules([
+			'id' => [
+				'rules'  => 'required',
+				'errors' => [
+					'required'      => 'Id is required'
+				]
+			],
+			'nama' => [
+				'rules'  => 'required',
+				'errors' => [
+					'required'      => 'Nama is required'
+				]
+			],
+			'bisnis_category' => [
+				'rules'  => 'required',
+				'errors' => [
+					'required'      => 'Categori Bisnis is required'
+				]
+			],
+			'alamat' => [
+				'rules'  => 'required',
+				'errors' => [
+					'required'      => 'Alamat is required'
+				]
+			],
+			'kota' => [
+				'rules'  => 'required',
+				'errors' => [
+					'required'      => 'Kota is required'
+				]
+			],
+			'telp' => [
+				'rules'  => 'required',
+				'errors' => [
+					'required'      => 'No. Telephon is required'
+				]
+			]
+		]);
+
+		if (!$validation->withRequest($this->request)->run()) {
+			return $this->fail($validation->getErrors());
+		}
+
+		$data           = $this->request->getJSON();
+
+		$filters = array(
+			'id'     => FILTER_SANITIZE_NUMBER_INT,
+			'nama'     => FILTER_SANITIZE_STRING,
+			'bisnis_category' => FILTER_SANITIZE_STRING,
+			'alamat' => FILTER_SANITIZE_STRING,
+			'kota' => FILTER_SANITIZE_STRING,
+			'telp' => FILTER_SANITIZE_NUMBER_INT,
+		);
+
+		$filtered = array();
+		foreach ($data as $key => $value) {
+			$filtered[$key] = filter_var($value, $filters[$key]);
+		}
+
+		$data = (object) $filtered;
+
+		$mdata = array(
+			"member_id" => $data->id,
+			"namaoutlet" => $data->nama,
+			"bisnis_category" => $data->bisnis_category,
+			"alamat"    => $data->alamat,
+			"kota"    => $data->kota,
+			"telp"    => $data->telp,
+			"created_at"    => date("Y-m-d H:i:s"),
+			"update_at"    => date("Y-m-d H:i:s"),
+		);
+
+		$result = $this->member->createOutlet($mdata);
+		if (@$result->code == 5055) {
+			return $this->respond(@$result);
+		}
+
+		$response = [
+			"code"     => "200",
+			"error"    => null,
+			"message"  => "Outlet successfully created"
+		];
+
 		return $this->respond($response);
 	}
 }
