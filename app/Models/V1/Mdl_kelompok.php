@@ -5,7 +5,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 use Exception;
 
-class Mdl_produk extends Model
+class Mdl_kelompok extends Model
 {
 
     public function __construct()

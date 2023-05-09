@@ -5,19 +5,19 @@ namespace App\Controllers\V1;
 use App\Controllers\BaseController;
 use CodeIgniter\API\ResponseTrait;
 
-class Produk extends BaseController
+class Kelompok extends BaseController
 {
     use ResponseTrait;
 
     public function __construct()
     {
-        $this->produk  = model('App\Models\V1\Mdl_produk');
+        $this->kelompok  = model('App\Models\V1\Mdl_kelompok');
     }
 
     public function get_data_kelompok()
     {
         $userid     = $this->request->getGet('userid', FILTER_SANITIZE_STRING);
-        $result = $this->produk->get_kelompok($userid);
+        $result     = $this->kelompok->get_kelompok($userid);
 
         $response = [
             "code"     => "200",
@@ -39,7 +39,7 @@ class Produk extends BaseController
                 ]
             ],
             'kelompok' => [
-                'rules'  => 'required|',
+                'rules'  => 'required',
                 'errors' => [
                     'required'      => 'Kelompok is required'
                 ]
@@ -65,12 +65,12 @@ class Produk extends BaseController
         $data = (object) $filtered;
 
         $mdata = array(
-            "member_id"       => $data->member_id,
-            "kelompok"       => $data->kelompok,
-            "created_at" => date("Y-m-d H:i:s")
+            "member_id"     => $data->member_id,
+            "kelompok"      => $data->kelompok,
+            "created_at"    => date("Y-m-d H:i:s")
         );
 
-        $result = $this->produk->add_kelompok($mdata);
+        $result = $this->kelompok->add_kelompok($mdata);
         if (@$result->code == 5055) {
             return $this->respond($result);
         }
