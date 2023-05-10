@@ -40,7 +40,7 @@ class Mdl_member extends Model
             $error = [
                 "code"      => "1060",
                 "error"     => "1060",
-                "message"   => $psn
+                "messages"   => $psn
             ];
             return (object)$error;
         } else {
@@ -73,7 +73,7 @@ class Mdl_member extends Model
             $error = [
                 "code"       => "5051",
                 "error"      => "02",
-                "message"    => "Invalid Token/expired token"
+                "messages"    => "Invalid Token/expired token"
             ];
             return (object) $error;
         }
@@ -95,7 +95,7 @@ class Mdl_member extends Model
             $error = [
                 "code"       => "5051",
                 "error"      => "03",
-                "message"    => "Activation failed, Invalid token"
+                "messages"    => "Activation failed, Invalid token"
             ];
             return (object) $error;
         }
@@ -109,7 +109,7 @@ class Mdl_member extends Model
             $error = [
                 "code"       => "5051",
                 "error"      => "04",
-                "message"    => "Invalid email"
+                "messages"    => "Invalid email"
             ];
             return (object) $error;
         }
@@ -125,7 +125,7 @@ class Mdl_member extends Model
             $error = [
                 "code"       => "5051",
                 "error"      => "07",
-                "message"    => "Member not found"
+                "messages"    => "Member not found"
             ];
             return (object) $error;
         }
@@ -149,22 +149,32 @@ class Mdl_member extends Model
             $error = [
                 "code"       => "5051",
                 "error"      => "08",
-                "message"    => "Failed to change password, please try again later"
+                "messages"    => "Failed to change password, please try again later"
             ];
             return (object) $error;
         }
     }
 
-    public function createOutlet($mdata = array())
+    public function getUserType($member_id)
     {
-        $outlet = $this->db->table("outlet");
-        if (!$outlet->insert($mdata)) {
-            $error = [
-                "code"       => "5055",
-                "error"      => "10",
-                "message"    => $this->db->error()
+        $sql = "SELECT * FROM `member_history` WHERE `member_id`= ?";
+        $query = $this->db->query($sql, $member_id)->getRow();
+        if (!$query) {
+            $data = [
+                'member_id' => $member_id,
+                'member_type' => '1',
+                'tanggal' => date("Y-m-d H:i:s")
             ];
-            return (object) $error;
+
+            $user = $this->db->table("member_history");
+            if (!$user->insert($data)) {
+                $error = [
+                    "code"       => "5055",
+                    "error"      => "10",
+                    "messages"    => $this->db->error()
+                ];
+                return (object) $error;
+            }
         }
     }
 }

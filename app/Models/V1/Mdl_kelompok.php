@@ -5,7 +5,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 use Exception;
 
-class Mdl_produk extends Model
+class Mdl_kelompok extends Model
 {
 
     public function __construct()
@@ -16,7 +16,7 @@ class Mdl_produk extends Model
     public function get_kelompok($member_id)
     {
         $sql = "
-        SELECT kelompok, IFNULL(x.jml,0) as jml FROM kelompok a 
+        SELECT `id`,`member_id`,`kelompok`,`is_deleted`,`created_at`,`update_at` , IFNULL(x.jml,0) as jml FROM kelompok a 
         LEFT JOIN (SELECT id_kelompok, count(1) as jml FROM kategori 
                 WHERE is_deleted='no'
                 GROUP BY id_kelompok) x ON a.id=x.id_kelompok
@@ -35,7 +35,7 @@ class Mdl_produk extends Model
             $error = [
                 "code"       => "5055",
                 "error"      => "10",
-                "message"    => $this->db->error()
+                "messages"    => $this->db->error()
             ];
             return (object) $error;
         }

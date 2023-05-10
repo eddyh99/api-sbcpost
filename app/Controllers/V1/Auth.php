@@ -75,7 +75,7 @@ class Auth extends BaseController
 		$response = [
 			"code"     => "200",
 			"error"    => null,
-			"message"  => [
+			"messages"  => [
 				"token"   => $result->token
 			]
 		];
@@ -99,7 +99,7 @@ class Auth extends BaseController
 			$response = [
 				"code"       => "5051",
 				"error"      => "05",
-				"message"    => "Member already active"
+				"messages"    => "Member already active"
 			];
 			return $this->respond($response);
 
@@ -108,7 +108,7 @@ class Auth extends BaseController
 			$response = [
 				"code"      => "5051",
 				"error"     => "06",
-				"message"   => "Your account is suspended. Please contact administrator"
+				"messages"   => "Your account is suspended. Please contact administrator"
 			];
 			return $this->respond($response);
 		}
@@ -121,7 +121,7 @@ class Auth extends BaseController
 		$response = [
 			"code"      => "200",
 			"error"      => null,
-			"message"    => "Member is successfully activated"
+			"messages"    => "Member is successfully activated"
 		];
 		return $this->respond($response);
 	}
@@ -166,15 +166,16 @@ class Auth extends BaseController
 					$response = [
 						"code"      => "5051",
 						"error"     => "22",
-						"message"   => "Please activate your account"
+						"messages"   => "Please activate your account"
 					];
 				} elseif ($user->status == 'disabled') {
 					$response = [
 						"code"      => "5051",
 						"error"     => "06",
-						"message"   => "Your account is suspended. Please contact administrator"
+						"messages"   => "Your account is suspended. Please contact administrator"
 					];
 				} elseif ($user->status == 'active') {
+					$user_type = $this->member->getUserType($user->id);
 					$session_data = array(
 						'id'        => $user->id,
 						'appid'        => $user->appid,
@@ -188,13 +189,13 @@ class Auth extends BaseController
 					$response = [
 						"code"      => "200",
 						"error"      => null,
-						"message"    => $session_data
+						"messages"    => $session_data
 					];
 				} else {
 					$response = [
 						"code"      => "5051",
 						"error"     => "04",
-						"message"   => "Invalid username or password"
+						"messages"   => "Invalid username or password"
 					];
 				}
 				return $this->respond($response);
@@ -202,7 +203,7 @@ class Auth extends BaseController
 				$response = [
 					"code"      => "5051",
 					"error"     => "04",
-					"message"   => "Invalid username or password"
+					"messages"   => "Invalid username or password"
 				];
 				return $this->respond($response);
 			}
@@ -210,7 +211,7 @@ class Auth extends BaseController
 			$response = [
 				"code"      => "5051",
 				"error"     => "04",
-				"message"   => "Invalid username or password"
+				"messages"   => "Invalid username or password"
 			];
 			return $this->respond($response);
 		}
@@ -228,7 +229,7 @@ class Auth extends BaseController
 		$response = [
 			"code"     => "200",
 			"error"    => null,
-			"message"  => [
+			"messages"  => [
 				"token"   => $token
 			]
 		];
@@ -250,7 +251,7 @@ class Auth extends BaseController
 			$response = [
 				"code"      => "5051",
 				"error"     => "06",
-				"message"   => "Your account is suspended. Please contact administrator"
+				"messages"   => "Your account is suspended. Please contact administrator"
 			];
 			return $this->respond($response);
 		}
@@ -258,7 +259,7 @@ class Auth extends BaseController
 		$response = [
 			"code"       => "200",
 			"error"      => null,
-			"message"    => $member
+			"messages"    => $member
 		];
 		return $this->respond($response);
 	}
@@ -321,7 +322,7 @@ class Auth extends BaseController
 		$response = [
 			"code"      => "200",
 			"error"      => null,
-			"message"    => "Password successfully changed"
+			"messages"    => "Password successfully changed"
 		];
 		return $this->respond($response);
 	}
@@ -410,7 +411,7 @@ class Auth extends BaseController
 		$response = [
 			"code"     => "200",
 			"error"    => null,
-			"message"  => "Outlet successfully created"
+			"messages"  => "Outlet successfully created"
 		];
 
 		return $this->respond($response);
