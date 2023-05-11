@@ -82,4 +82,80 @@ class Kelompok extends BaseController
         ];
         return $this->respond($response);
     }
+
+    public function update_kelompok()
+    {
+        $validation = $this->validation;
+        $validation->setRules([
+            'kelompok_id' => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required'      => 'Kelompok ID is required'
+                ]
+            ],
+            'kelompok' => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required'      => 'Kategori is required'
+                ]
+            ]
+        ]);
+
+        if (!$validation->withRequest($this->request)->run()) {
+            return $this->fail($validation->getErrors());
+        }
+
+        $data           = $this->request->getJSON();
+
+        $filters = array(
+            'kelompok_id'  => FILTER_SANITIZE_STRING,
+            'kelompok'     => FILTER_SANITIZE_STRING,
+        );
+
+        $filtered = array();
+        foreach ($data as $key => $value) {
+            $filtered[$key] = filter_var($value, $filters[$key]);
+        }
+
+        $data = (object) $filtered;
+
+        $mdata = array(
+            "kelompok"      => $data->kelompok,
+            "update_at"     => date("Y-m-d H:i:s")
+        );
+
+        $result = $this->kelompok->update_kelompok($mdata, $data->kelompok_id);
+        if (@$result->code == 5055) {
+            return $this->respond($result);
+        }
+
+        $response = [
+            "code"     => "200",
+            "error"    => null,
+            "messages"  => $mdata
+        ];
+        return $this->respond($response);
+    }
+
+    public function delete_kelompok()
+    {
+        $kelompok_id = $this->request->getGet('kelompok_id', FILTER_SANITIZE_STRING);
+        $mdata = array(
+            "is_deleted"      => "yes",
+            "update_at"     => date("Y-m-d H:i:s")
+        );
+
+        $result = $this->kelompok->delete_kelompok($mdata, $kelompok_id);
+        if (@$result->code == 5055) {
+            return $this->respond($result);
+        }
+
+        $response = [
+            "code"     => "200",
+            "error"    => null,
+            "messages"  => $mdata
+        ];
+
+        return $this->respond($response);
+    }
 }

@@ -37,6 +37,20 @@ class Kategori extends BaseController
         return $this->respond($response);
     }
 
+    public function getbyId_kategori()
+    {
+        $id     = $this->request->getGet('id', FILTER_SANITIZE_STRING);
+        $result     = $this->kategori->get_kategori_byid($id);
+
+        $response = [
+            "code"     => "200",
+            "error"    => null,
+            "messages"  =>  $result
+        ];
+
+        return $this->respond($response);
+    }
+
     public function add_kategori()
     {
         $validation = $this->validation;

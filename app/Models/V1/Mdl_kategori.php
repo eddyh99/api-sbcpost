@@ -27,6 +27,18 @@ class Mdl_kategori extends Model
         return $query;
     }
 
+    public function get_kategori_byid($id)
+    {
+        $sql = "
+        SELECT a.id, a.member_id, a.id_kelompok, a.kategori, GROUP_CONCAT(b.id_outlet SEPARATOR ',') AS outlet 
+        FROM kategori a INNER JOIN kategori_outlet b ON a.id=b.id_kategori
+        WHERE a.id = ?;
+        ";
+        $query = $this->db->query($sql, $id)->getResult();
+
+        return $query;
+    }
+
     public function add_kategori($data, $outletid)
     {
         $tblkategori    = $this->db->table("kategori");

@@ -40,4 +40,52 @@ class Mdl_kelompok extends Model
             return (object) $error;
         }
     }
+
+
+    public function update_kelompok($data, $id)
+    {
+        $tblkategori    = $this->db->table("kelompok");
+
+        if (!$tblkategori->update($data, "id=" . $id)) {
+            $error = [
+                "code"       => "5055",
+                "error"      => "10",
+                "messages"    => $this->db->error()
+            ];
+            return (object) $error;
+        }
+    }
+
+    public function delete_kelompok($data, $id)
+    {
+        $tblkelompok      = $this->db->table("kelompok");
+        $tblkategori   = $this->db->table("kategori");
+
+        $this->db->transStart();
+        if (!$tblkelompok->update($data, "id=" . $id)) {
+            $psn = "Periksa data Kelompok";
+        }
+
+        $sql = " SELECT * FROM kategori a WHERE a.id_kelompok=?;";
+        $query = $this->db->query($sql, $id)->getResult();
+        if ($query) { // Jika ada data
+            if (!$tblkategori->update($data, "id_kelompok=" . $id)) {
+                $psn = "Periksa data Kategori";
+            }
+        }
+
+        $this->db->transComplete();
+
+        if ($this->db->transStatus() === false) {
+            $this->db->transRollback();
+            $error = [
+                "code"      => "5055",
+                "error"     => "1060",
+                "message"   => $psn
+            ];
+            return (object)$error;
+        } else {
+            $this->db->transCommit();
+        }
+    }
 }
