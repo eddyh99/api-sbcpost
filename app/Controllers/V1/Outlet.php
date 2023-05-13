@@ -29,6 +29,20 @@ class Outlet extends BaseController
         }
     }
 
+    public function get_kategori_outlet()
+    {
+        $result     = $this->outlet->get_kategori_outlet();
+        if (@$result) {
+            $response = [
+                "code"     => "200",
+                "error"    => null,
+                "messages"  =>  $result
+            ];
+
+            return $this->respond($response);
+        }
+    }
+
     public function add_outlet()
     {
         $validation = $this->validation;
@@ -113,6 +127,30 @@ class Outlet extends BaseController
             "code"     => "200",
             "error"    => null,
             "messages"  => $result
+        ];
+
+        return $this->respond($response);
+    }
+
+    public function delete_list_ot_kategori()
+    {
+        $kt = $this->request->getGet('kt', FILTER_SANITIZE_STRING);
+        $ot = $this->request->getGet('ot', FILTER_SANITIZE_STRING);
+
+        $mdata = array(
+            "id_kategori" => $kt,
+            "id_outlet" => $ot
+        );
+
+        $result = $this->outlet->delete_list_ot_kategori($mdata);
+        if (@$result->code == 5055) {
+            return $this->respond($result);
+        }
+
+        $response = [
+            "code"     => "200",
+            "error"    => null,
+            "messages"  => $mdata
         ];
 
         return $this->respond($response);

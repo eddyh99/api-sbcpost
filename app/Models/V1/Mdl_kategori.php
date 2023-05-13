@@ -18,9 +18,30 @@ class Mdl_kategori extends Model
         // LEFT JOIN (SELECT id_kelompok, count(1) as jml FROM kategori 
         //         WHERE is_deleted='no'
         //         GROUP BY id_kelompok) x ON a.id=x.id_kelompok
+        // $sql = "
+        // SELECT * FROM kategori a 
+        // WHERE a.is_deleted='no' AND a.member_id=?;
+        // ";
+
         $sql = "
-        SELECT * FROM kategori a 
-        WHERE a.is_deleted='no' AND a.member_id=?;
+            SELECT 
+            a.id,
+            a.member_id,
+            a.id_kelompok,
+            a.kategori,
+            a.is_deleted,
+            a.created_at,
+            a.update_at,
+            GROUP_CONCAT(b.id_outlet SEPARATOR ',') as outlet,
+            IFNULL(c.jml,0) as jml_produk
+            FROM kategori a 
+            LEFT JOIN kategori_outlet b ON a.id = b.id_kategori
+            LEFT JOIN (
+                SELECT id_kategori, count(1) as jml FROM produk_outlet 
+                GROUP BY id_produk
+            ) c ON a.id=c.id_kategori
+            WHERE a.is_deleted='no' AND a.member_id=?
+            GROUP BY a.id;
         ";
         $query = $this->db->query($sql, $member_id)->getResult();
 
@@ -29,12 +50,32 @@ class Mdl_kategori extends Model
 
     public function get_kategori_byid($id)
     {
+        // $sql = "
+        // SELECT a.id, a.member_id, a.id_kelompok, a.kategori, GROUP_CONCAT(b.id_outlet SEPARATOR ',') AS outlet 
+        // FROM kategori a INNER JOIN kategori_outlet b ON a.id=b.id_kategori
+        // WHERE a.id = ?;
+        // ";
         $sql = "
-        SELECT a.id, a.member_id, a.id_kelompok, a.kategori, GROUP_CONCAT(b.id_outlet SEPARATOR ',') AS outlet 
-        FROM kategori a INNER JOIN kategori_outlet b ON a.id=b.id_kategori
-        WHERE a.id = ?;
+        SELECT 
+        a.id,
+        a.member_id,
+        a.id_kelompok,
+        a.kategori,
+        a.is_deleted,
+        a.created_at,
+        a.update_at,
+        GROUP_CONCAT(b.id_outlet SEPARATOR ',') as outlet,
+        IFNULL(c.jml,0) as jml_produk
+        FROM kategori a 
+        LEFT JOIN kategori_outlet b ON a.id = b.id_kategori
+        LEFT JOIN (
+            SELECT id_kategori, count(1) as jml FROM produk_outlet 
+            GROUP BY id_produk
+        ) c ON a.id=c.id_kategori
+        WHERE a.is_deleted='no' AND a.id = ?
+        GROUP BY a.id;
         ";
-        $query = $this->db->query($sql, $id)->getResult();
+        $query = $this->db->query($sql, $id)->getRow();
 
         return $query;
     }
@@ -115,6 +156,33 @@ class Mdl_kategori extends Model
         } else {
             $this->db->transCommit();
             return (object)$mdata;
+        }
+    }
+
+    public function delete_kategori($data, $kategori_id)
+    {
+        $tblkategori    = $this->db->table("kategori");
+        $tbloutlet      = $this->db->table("kategori_outlet");
+
+        $this->db->transStart();
+        if (!$tblkategori->update($data, "id=" . $kategori_id)) {
+            $psn = array("error" => "Periksa data input");
+            // throw new Exception("Email already used");
+        }
+        $tbloutlet->delete(["id_kategori" => $kategori_id]);
+        $this->db->transComplete();
+
+        if ($this->db->transStatus() === false) {
+            $this->db->transRollback();
+            $error = [
+                "code"      => "5055",
+                "error"     => "1060",
+                "message"   => $psn
+            ];
+            return (object)$error;
+        } else {
+            $this->db->transCommit();
+            return;
         }
     }
 }

@@ -199,4 +199,26 @@ class Kategori extends BaseController
         ];
         return $this->respond($response);
     }
+
+    public function delete_kategori()
+    {
+        $kategori_id = $this->request->getGet('kategori_id', FILTER_SANITIZE_STRING);
+        $mdata = array(
+            "is_deleted"      => "yes",
+            "update_at"     => date("Y-m-d H:i:s")
+        );
+
+        $result = $this->kategori->delete_kategori($mdata, $kategori_id);
+        if (@$result->code == 5055) {
+            return $this->respond($result);
+        }
+
+        $response = [
+            "code"     => "200",
+            "error"    => null,
+            "messages"  => $mdata
+        ];
+
+        return $this->respond($response);
+    }
 }

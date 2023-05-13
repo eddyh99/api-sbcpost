@@ -16,9 +16,19 @@ class Mdl_outlet extends Model
     public function get_outlet($member_id)
     {
         $sql = "
-        SELECT id,namaoutlet FROM outlet WHERE member_id=? AND is_deleted='no'
+        SELECT * FROM outlet WHERE member_id=? AND is_deleted='no'
         ";
         $query = $this->db->query($sql, $member_id)->getResult();
+
+        return $query;
+    }
+
+    public function get_kategori_outlet()
+    {
+        $sql = "
+        SELECT * FROM `kategori_outlet`
+        ";
+        $query = $this->db->query($sql)->getResult();
 
         return $query;
     }
@@ -33,6 +43,20 @@ class Mdl_outlet extends Model
                 "messages"    => $this->db->error()
             ];
             return (object) $error;
+        }
+    }
+
+    public function delete_list_ot_kategori($data)
+    {
+        $tbl_kt_ot = $this->db->table("kategori_outlet");
+
+        if (!$tbl_kt_ot->delete($data)) {
+            $error = [
+                "code"      => "5055",
+                "error"     => "1060",
+                "message"   => $this->db->error()
+            ];
+            return (object)$error;
         }
     }
 }
