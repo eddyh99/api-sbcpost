@@ -28,6 +28,21 @@ class Kelompok extends BaseController
         return $this->respond($response);
     }
 
+    public function get_data_kelompok_by_id()
+    {
+        $userid     = $this->request->getGet('member_id', FILTER_SANITIZE_STRING);
+        $kelompok_id     = $this->request->getGet('kelompok_id', FILTER_SANITIZE_STRING);
+        $result     = $this->kelompok->get_kelompok_by_id($userid, $kelompok_id);
+
+        $response = [
+            "code"     => "200",
+            "error"    => null,
+            "messages"  =>  $result
+        ];
+
+        return $this->respond($response);
+    }
+
     public function add_data_kelompok()
     {
         $validation = $this->validation;

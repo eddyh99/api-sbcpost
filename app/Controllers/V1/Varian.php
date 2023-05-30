@@ -46,6 +46,53 @@ class Varian extends BaseController
         return $this->respond($response);
     }
 
+    public function get_varian_by_id()
+    {
+        $userid     = $this->request->getGet('member_id', FILTER_SANITIZE_STRING);
+        $varian_id     = $this->request->getGet('varian_id', FILTER_SANITIZE_STRING);
+        $result     = $this->varian->get_varian_by_id($userid, $varian_id);
+
+        $response = [
+            "code"     => "200",
+            "error"    => null,
+            "messages"  =>  $result
+        ];
+
+        return $this->respond($response);
+    }
+
+    public function get_subvarian_by_id_varian()
+    {
+        $varian_id     = $this->request->getGet('varian_id', FILTER_SANITIZE_STRING);
+        $result     = $this->varian->get_subvarian_by_idVarian($varian_id);
+
+        $response = [
+            "code"     => "200",
+            "error"    => null,
+            "messages"  =>  $result
+        ];
+
+        return $this->respond($response);
+    }
+
+    public function delete_subvarian()
+    {
+        $id     = $this->request->getGet('id', FILTER_SANITIZE_STRING);
+        $data = [
+            'is_deleted' => 'yes'
+        ];
+
+        $result     = $this->varian->delete_subvarian($data, $id);
+
+        $response = [
+            "code"     => "200",
+            "error"    => null,
+            "messages"  =>  $result
+        ];
+
+        return $this->respond($response);
+    }
+
     public function add_varian()
     {
         $validation = $this->validation;
@@ -165,6 +212,29 @@ class Varian extends BaseController
         );
 
         $result = $this->varian->update_varian($mdata, $data->subvarian);
+        if (@$result->code == 5055) {
+            return $this->respond($result);
+        }
+
+        $response = [
+            "code"     => "200",
+            "error"    => null,
+            "messages"  => $mdata
+        ];
+        return $this->respond($response);
+    }
+
+    public function delete_varian()
+    {
+        $id     = $this->request->getGet('id', FILTER_SANITIZE_STRING);
+
+        $mdata = array(
+            "id"            => $id,
+            "update_at"     => date("Y-m-d H:i:s"),
+            "is_deleted"    => "yes"
+        );
+
+        $result = $this->varian->delete_varian($mdata);
         if (@$result->code == 5055) {
             return $this->respond($result);
         }
